@@ -1,0 +1,119 @@
+.App {
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grocery-container {
+  width: 700px;
+  background-color: rgb(242, 249, 255);
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px rgba(213, 214, 216, 0.8);
+}
+form {
+  margin-bottom: 40px;
+}
+input {
+  width: 300px;
+  border: none;
+  padding: 7px 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-right: 5px;
+  box-shadow: 1px 2px 5px rgba(202, 202, 202, 0.8);
+}
+input::placeholder {
+  font-weight: bold;
+  font-style: italic;
+  opacity: 0.5;
+  padding-left: 5px;
+}
+.btn-submit {
+  padding: 7px 15px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(61, 61, 250);
+  color: #fff;
+  box-shadow: 1px 2px 5px rgba(202, 202, 202, 0.8);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.1s ease-in;
+}
+.clear-btn {
+  margin: 20px auto;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(250, 54, 54);
+  color: #fff;
+  box-shadow: 1px 2px 5px rgba(202, 202, 202, 0.8);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.1s ease-in;
+}
+.btn-submit:focus, .clear-btn:focus {
+  outline: none
+}
+.btn-submit:active, .clear-btn:active {
+  transform: scale(0.9);
+}
+.list-container {
+  margin: 30px 40px;
+  
+}
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgb(228, 222, 250);
+  margin-bottom: 5px;
+}
+.edit-btn, .trash-btn {
+  border: none;
+  margin: 0 3px;
+  font-size: 18px;
+  background-color: transparent;
+}
+.edit-btn {
+  color: rgb(4, 177, 4);
+}
+.trash-btn {
+  color: red;
+}
+.alert-danger, .alert-success {
+  margin: 20px auto;
+  border-radius: 5px;
+  width: 500px;
+  height: 30px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #fff;
+
+}
+.alert-danger {
+  background-color: rgb(252, 124, 124);
+}
+.alert-success {
+  background-color: rgb(88, 189, 88);
+}
+
+@media screen and (max-width: 600px){
+  .grocery-container {
+    width: 80%;
+  }
+  .clear-btn {
+    width: 90%;
+  }
+  .btn-submit {
+    width: 320px;
+    margin: 20px auto;
+  }
+  .alert-success, .alert-danger {
+    width: 80%;
+  }
+}
