@@ -6,7 +6,7 @@ import Alert from './Alert'
 const getLocalStorage = () => {
   let list = localStorage.getItem('list')
   if(list){
-    return JSON.parse(localStorage.getItem('list'))
+    return JSON.parse(list)
   }
   else {
     return []
@@ -60,9 +60,7 @@ function App() {
     setOldName(itemToEdit.title)
     setEditId(id)
   }
-  const removeAlert = ()=>{
-    showAlert()
-  }
+
   useEffect(()=>{
     localStorage.setItem('list', JSON.stringify(list))
   }, [list])
@@ -71,7 +69,7 @@ function App() {
     <div className="App">
       <div className="grocery-container">
         <section>
-          {alert.show ? <Alert {...alert} removeAlert={removeAlert} list={list}/> : ''}
+          {alert.show ? <Alert {...alert} removeAlert={showAlert} list={list}/> : ''}
           <form onSubmit={handleSubmit}>
             <h3>Grocery Bud</h3>
             <div>

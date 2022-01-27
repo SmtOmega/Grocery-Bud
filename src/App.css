@@ -106,11 +106,15 @@ input::placeholder {
   .grocery-container {
     width: 80%;
   }
+  input {
+    width: 90%;
+    margin-right: 0;
+  }
   .clear-btn {
     width: 90%;
   }
   .btn-submit {
-    width: 320px;
+    width: 90%;
     margin: 20px auto;
   }
   .alert-success, .alert-danger {
